@@ -7,8 +7,8 @@ document.getElementById("rsvp-form").addEventListener("submit", function(event) 
 
   // Criar um objeto com os dados do formulário
   var formData = new FormData();
-  formData.append("Nome", name); 
-  formData.append("Confirmação de Presença", attendance);
+  formData.append("T2Ybvb2", name); 
+  formData.append("T2Ybvb4", attendance);
 
   // Enviar os dados para o servidor
   fetch('https://forms.gle/pJ5btJLUFXpcEUzd6', {
