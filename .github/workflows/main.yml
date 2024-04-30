@@ -12,6 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Configure Git
+        run: |
+          git config --global user.email "alex.ferreira.ferro@gmail.com"
+          git config --global user.name "Alex Ferro"
+
       - name: Update RSVP data
         run: |
           echo '[]' > .github/rsvp.json
