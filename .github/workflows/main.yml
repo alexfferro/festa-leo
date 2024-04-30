@@ -1,0 +1,20 @@
+name: Update RSVP Data
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update RSVP data
+        run: |
+          echo '[]' > .github/rsvp.json
+          git add .github/rsvp.json
+          git commit -m "Update RSVP data" || true
+          git push
