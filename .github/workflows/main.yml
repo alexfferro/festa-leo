@@ -18,6 +18,7 @@ jobs:
         run: |
           git config --global user.email "alex.ferreira.ferro@gmail.com"
           git config --global user.name "Alex Ferreira"
+          git remote remove origin || true
           git remote add origin https://github.com/alexfferro/festa-leo.git
           git push --set-upstream origin main
       - name: Update RSVP data
