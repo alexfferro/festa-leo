@@ -9,14 +9,14 @@ document.getElementById("rsvp-form").addEventListener("submit", function(event) 
     attendance: attendance
   };
 
-  fetch('.github/rsvp.json', {
+  fetch('/rsvp.json', {
     method: 'GET'
   })
   .then(response => response.json())
   .then(json => {
     json.push(data);
 
-    fetch('.github/rsvp.json', {
+    fetch('/rsvp.json', {
       method: 'PUT',
       body: JSON.stringify(json)
     })
