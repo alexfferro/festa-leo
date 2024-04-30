@@ -14,7 +14,7 @@ jobs:
 
       - name: Configure Git
         env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.TOKEN }}
         run: |
           git config --global user.email "alex.ferreira.ferro@gmail.com"
           git config --global user.name "Alex Ferreira"
